@@ -19,8 +19,6 @@ import java.util.Map;
  */
 @Data
 @ConfigurationProperties(prefix = "aliyun.sms")
-@PropertySource(value = {"classpath:application-dev.properties"}, encoding = "utf-8")
-@Component
 public class SmsProperties implements InitializingBean {
 
     private String accessKeyId;
