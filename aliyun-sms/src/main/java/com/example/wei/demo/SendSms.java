@@ -16,7 +16,7 @@ import com.aliyuncs.profile.DefaultProfile;
  */
 public class SendSms {
     public static void main(String[] args) {
-        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "LTAI4FyWCyYJwkVnfSNqGLia", "J1qJCPb9kp27l8Xh68CKLDpn34qZk0");
+        DefaultProfile profile = DefaultProfile.getProfile("cn-hangzhou", "", "");
         IAcsClient client = new DefaultAcsClient(profile);
 
         CommonRequest request = new CommonRequest();
@@ -25,9 +25,9 @@ public class SendSms {
         request.setSysVersion("2017-05-25");
         request.setSysAction("SendSms");
         request.putQueryParameter("RegionId", "cn-hangzhou");
-        request.putQueryParameter("PhoneNumbers", "15711036498");
-        request.putQueryParameter("SignName", "慧医");
-        request.putQueryParameter("TemplateCode", "SMS_206563594");
+        request.putQueryParameter("PhoneNumbers", "");
+        request.putQueryParameter("SignName", "");
+        request.putQueryParameter("TemplateCode", "");
         request.putQueryParameter("TemplateParam", "{\"corpName\":\"三墩\",\"doctorName\":\"张三\",\"patientVisitUrl\":\"1233\"}");
         try {
             CommonResponse response = client.getCommonResponse(request);
